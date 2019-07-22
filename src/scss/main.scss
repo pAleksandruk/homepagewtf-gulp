@@ -10,7 +10,280 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  color: $yellow;
-  background: $violet;
+
+/*Old css styles from prevoius "homepage" project without gulp */
+
+html {
+	box-sizing: border-box;
 }
+
+*, *::after, *::before {
+	box-sizing: inherit;
+}
+
+.body { /* body elements */
+	background-color: rgb(255, 255, 255);
+	background-image: linear-gradient(55deg, #839393 17%, #3325e5 100%);
+	background-color: #839393;
+	background-size: cover;
+	margin: 32px auto;
+	max-width: 700px;
+	min-height: 100vh;
+	width: 100%;
+	text-align: center; 
+}
+
+.header {
+
+  &__title { /* h1, website title BEM*/
+    color: rgb(255, 255, 255);
+    padding-top: 50px; 
+    &--red {
+    color: darkred;
+    }
+  }
+
+.logo {
+
+}
+
+.WTFlogo {
+  border-radius: 25px;
+}
+.site-header { /* main menu BEM */
+	background-color: rgba(100, 100, 100, 0.555);
+	border-radius: 25px;
+	box-sizing: content-box;
+	position: fixed;
+	top: 0;
+	width: 700px;
+	z-index: 10;
+}
+
+.navigation{
+  &__list {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  &_item {
+    display: block;
+    margin: 0 5px;
+  }
+    &:hover {
+      /*background: purple;*/
+      border-radius: 45px;
+      font-weight: bold;
+      padding: 5px;
+    }
+  &__link {
+    color: white;
+    font-style: italic;
+    &:hover {
+      color: whitesmoke;
+    }
+    &--blog {
+      color: white;
+      font-style: italic;
+    }
+      &:hover {
+        font-weight: bold;
+      }
+  }   
+}
+
+.main { 
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 25px;
+  padding: 2vw;
+  &__section {
+
+  }
+  &__paragraph { /* p text main element + BEM */
+    color: darkblue;
+    font-size: 18px;
+    padding: 5px 0 16px 0;
+  }
+  &__paragraph--blog { /* p text blog element + BEM */
+    font-size: 16px;
+    padding: 0 0 16px 0;
+  }
+}
+
+.article{
+
+}
+
+.section__header { /* h2 text element BEM*/
+	color: purple;
+	font-size: 22px;
+	margin-bottom: 0;
+	text-decoration: underline;
+}
+
+
+.blog {
+  &__navigation--header {
+    color: white;
+  }
+  &__navigation--box{
+    background-color: rgba(100, 100, 100, 0.555);
+    border: 2px solid white;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-weight: bold;
+    height: 100px;
+    margin: auto;
+    width: 350px;
+  }
+  &__header {
+    border-bottom: 5px dotted white;
+    box-sizing: border-box;
+    color: #1460AA;
+    font-size: 32px;
+    margin: 2vw 15vw;
+  }
+  &__section {
+
+  }
+  &__section:not(.blog__section--special) {
+    background-color: rgba(100, 100, 100, 0.555);
+    border-radius: 25px;
+    padding: 1vw;
+  }
+}
+
+.post__title {
+	color: black;
+	font-size: 18px;
+  font-style: italic;
+  &__title::before {
+    color: red;
+    content: "</>";
+    display: inline-block;
+    margin-right: 5px;
+  }
+  &__title::after {
+    content: "";
+    border-radius: 50%; 
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-left: 5px;
+    background: #1460AA;
+  }
+}
+
+.glossary {
+}
+
+.data {
+
+}
+
+.table {
+	border: 1px solid grey;
+	border-collapse: collapse;
+	table-layout: auto;
+  width: 100%;
+  &__caption {
+    border: 1px solid white;
+  }
+  &_head {
+  }
+  &__tr {
+  }
+  &__th {
+    border: 1px solid white;
+  }
+  &_body {
+  }
+  &__td {
+    border: 1px solid white;
+  }
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+}
+
+/* on site addons */
+.footer {
+	background-color: rgba(100, 100, 100, 0.555);
+	border-radius: 25px;
+	color: white; 
+	justify-content: center;
+	margin: 2vw 0 0 0;
+	padding: 1vw;
+}
+
+.top {
+	background-color: rgba(100, 100, 100, 0.555);
+	border-radius: 25px;
+	bottom: 10px;
+	color: white;
+	left: 10px;
+	padding: 1vw 2vw;
+	position: fixed;
+	text-decoration: none;
+}
+
+/* weekdays pages */
+.weekday__image { 
+	margin: 1vw;
+}
+
+/*Media*/
+
+@media  (max-width: 601px) {
+	.grid {
+		grid-template-columns: 1fr;
+  }
+  .navigation__switcher{
+		display: none;
+	}
+}
+
+@media (max-width: 640px) {
+	.site-header {
+		border-radius: 25px;
+		display: flex;
+		justify-content: flex-start;
+		max-width: 100px;
+		min-height: 40px;
+  }
+  
+  .navigation {
+    &__list {
+      display: none;
+      flex-direction: column;
+      align-content: flex-end;
+    }
+    &__list--visable {
+      display: flex;
+    }
+    &__item {
+      margin: 5px;
+      padding-top: 3vw;
+    }
+    &__switcher {
+      align-content: center;
+      background: none;
+      border: none;
+      color: white;
+      display: flex;
+      font-size: 30px;
+      margin: 1vw 0 5vw 5vw ;
+      position: absolute; 
+    }
+    &__item--menu {
+      display: none;
+    }
+  }
+}
+

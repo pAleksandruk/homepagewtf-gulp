@@ -1,40 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
-    <meta name="description" content="Description" />
+<html lang="pl">
 
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>WTF homepage</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
 
-    <link rel="manifest" href="manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+<body class="body">
+	<header class="site-header flex">
+		<nav class="navigation">
+			<ul class="navigation__list navigation__list--js">
+				<li class="navigation__item navigation__item--menu"><a class="navigation__link"><strong>Go to:</strong></a></li>
+				<li class="navigation__item"><a class="navigation__link" href="index.html">home</a></li>
+				<li class="navigation__item"><a class="navigation__link" href="podstrona.html">podstrona</a></li>
+				<li class="navigation__item"><a class="navigation__link" href="tydzien/monday.html">Monday</a></li>
+				<li class="navigation__item"><a class="navigation__link" href="tydzien/monday.html">Monday</a></li>
+				<li class="navigation__item"><a class="navigation__link" href="tydzien/tuesday.html">Tuesday</a>
+				</li>
+				<li class="navigation__item"><a class="navigation__link" href="tydzien/wednesday.html">Wednesday</a>
+				</li>
+				<li class="navigation__item"><a class="navigation__link" href="tydzien/thursday.html">Thursday</a>
+				</li>
+				<li class="navigation__item"><a class="navigation__link" href="tydzien/friday.html">Friday</a></li>
+			</ul>
+		</nav>
+		<button class="navigation__switcher navigation__switcher--js" aria-label="Open menu">&#9776;</button>
+	</header>
+	<main class="main" id="top">
+		<article class="article">
+			<header class="header">
+				<h1 class="header__title header__title--js">
+					Kurs WTF: co ten frontend.
+				</h1>
+				<button class="header__button header_button--js">FTW?</button>
+				<section class="main__section">
+					<h2 class="section__header">ABOUT</h2>
+					<p class="main__paragraph">
+						Będę frontendę! <br> Strona powstaje w trakcie trwania kurs frontendu by <b>M. Korsana</b> pod tytułem<br>
+						<strong>WTF</strong>: <em>co ten frontend.</em>
+					</p>
+					<img src="assets/img/WTFlogo.png" alt="WTF logo" class="WTFlogo">
+					<p class="main__paragraph--addon about__paragraph--js">
+						Paragraf testowy.
+					</p>
+				</section>
+			</header>
+		</article>
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+		<article class="blog">
+			<h2 class="blog__header">BLOG</h2>
+			<div class="blog__navigation--box">
+				<h3 class="blog__navigation--header">JUMP to blog post!</h3>
+				<a class="navigation__link navigation__link--blog" href="#w01">W01</a>
+				<a class="navigation__link navigation__link--blog" href="#w02">W02</a>
+				<a class="navigation__link navigation__link--blog" href="#w03">W03</a>
+				<a class="navigation__link navigation__link--blog" href="#w04">W04</a>
+				<a class="navigation__link navigation__link--blog" href="#w05">W05</a>
+				<a class="navigation__link navigation__link--blog" href="#w06">W06</a>
+				<a class="navigation__link navigation__link--blog" href="#w07">W07</a>
+			</div>
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+			<div class="grid">
+				<section class="blog__section blog__section--special" id="w01">
+					<h3 class="post__title">wtf - W01</h3>
+					<p class="main__paragraph main__paragraph--blog">
+						TYDZIEN I<br>
+						START: 20.05.2019<br>
+						Wstęp i podstawowe informacje dotyczące kursu.
+					</p>
+				</section>
 
-    <script src="js/main.js"></script>
-  </body>
+				<section class="blog__section" id="w02">
+					<h3 class="post__title">wtf - W02</h3>
+					<p class="main__paragraph main__paragraph--blog">
+						TYDZIEN II<br>
+						START: 27.05.2019<br>
+						Lekcje dotyczące: podstaw html, css i dev tools
+					</p>
+				</section>
+
+				<section class="blog__section blog__section--special" id="w03">
+					<h3 class="post__title">wtf - W03</h3>
+					<p class="main__paragraph main__paragraph--blog">
+						TYDZIEN III<br>
+						START: 03.06.2019<br>
+						Lekcje dotyczące: Kanban (Trello), HTML & CSS, pisania znaczników i stylowania, JS i terminala.
+					</p>
+				</section>
+
+				<section class="blog__section" id="w04">
+					<h3 class="post__title">wtf - W04</h3>
+					<p class="main__paragraph main__paragraph--blog">
+						TYDZIEN IV<br>
+						START: 10.06.2019<br>
+						Lekcje dotyczące: Git, boxów i bloków, oraz DOM + jako bonus video Dzien z życia frontendowca.
+					</p>
+				</section>
+
+				<section class="blog__section blog__section--special" id="w05">
+					<h3 class="post__title">wtf - W05</h3>
+					<p class="main__paragraph main__paragraph--blog">
+						TYDZIEN V<br>
+						START: 17.06.2019<br>
+						Lekcje dotyczące: Logiki JS, JS:functions, HTML:listy+tabele+definicje, CSS:normalizacja, CSS:flexbox, tła i
+						cięcie grafik.
+					</p>
+				</section>
+
+				<section class="blog__section" id="w06">
+					<h3 class="post__title">wtf - W06</h3>
+					<p class="main__paragraph main__paragraph--blog">
+						TYDZIEN VI<br>
+						START: 24.06.2019<br>
+						Lekcje dotyczące: Formularzy, CSS:grid, CSS:media queries, JS: eventy, hamburger menu i GitHub pages.
+					</p>
+				</section>
+
+				<section class="blog__section blog__section--special" id="w07">
+					<h3 class="post__title">wtf - W07</h3>
+					<p class="main__paragraph main__paragraph--blog">
+						TYDZIEN VII<br>
+						START: 1.07.2019<br>
+						Lekcje dotyczące: JS: Obiekty, CSS: pseudoelementy i pseudoobiekty, SASS, Node.js & NPM, GULP starter kit.
+					</p>
+				</section>
+			</div>
+		</article>
+
+		<section class="glossary">
+			<h2 class="section__header">Pojęcia</h2>
+			<dl>
+				<dt><strong>CSS</strong></dt>
+				<dd>style na stronie, to co widzi użytkownik</dd>
+				<dt><strong>HTML</strong></dt>
+				<dd>treść strony + szkeliet</dd>
+				<dt><strong>JS</strong></dt>
+				<dd>JavaScript - język programowania stworzony przez Netscape stoowany na stronach internetowych</dd>
+			</dl>
+		</section>
+
+		<section class="data">
+			<h2 class="section__header">Progress</h2>
+			<table class="table">
+				<caption class="table__caption">Progres poznawczy technologii</caption>
+				<thead class="table__head">
+					<tr class="table__tr">
+						<th class="table__th">Technologia</th>
+						<th class="table__th">Zaawansowanie</th>
+						<th class="table__th">Max</th>
+					</tr>
+				</thead>
+				<tbody class="table__body">
+					<tr class="table__tr">
+						<td class="table__td">HTML</td>
+						<td class="table__td">6</td>
+						<td class="table__td">12</td>
+					</tr>
+					<tr class="table__tr">
+						<td class="table__td">CSS</td>
+						<td class="table__td">6</td>
+						<td class="table__td">12</td>
+					</tr>
+					<tr class="table__tr">
+						<td class="table__td">JS</td>
+						<td class="table__td">6</td>
+						<td class="table__td">12</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</section>
+	</main>
+
+	<footer class="footer">
+		<a href="#top" class="top">Na górę</a>
+		Strona stworzona przez @Pav na kursie WTF.
+	</footer>
+
+	<script src="js/main.js"></script>
+</body>
+
 </html>
