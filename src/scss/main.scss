@@ -13,14 +13,6 @@ html {
 
 /*Old css styles from prevoius "homepage" project without gulp */
 
-html {
-	box-sizing: border-box;
-}
-
-*, *::after, *::before {
-	box-sizing: inherit;
-}
-
 .body { /* body elements */
 	background-color: rgb(255, 255, 255);
 	background-image: linear-gradient(55deg, #839393 17%, #3325e5 100%);
@@ -41,7 +33,7 @@ html {
     color: darkred;
     }
   }
-
+}
 .logo {
 
 }
@@ -67,14 +59,17 @@ html {
 		list-style: none;
 		padding: 0;
 	}
-	&_item {
+	&__item {
 		display: block;
 		margin: 0 5px;
 		&:hover {
-			/*background: purple;*/
-			border-radius: 45px;
+      font-variant:small-caps;
 			font-weight: bold;
 			padding: 5px;
+    }
+    &--menu {
+      font-style: none;
+      font-variant:none;
     }
 	}
 	&__link {
@@ -85,9 +80,10 @@ html {
     }
 		&--blog {
 			color: white;
-			font-style: italic;
+      font-style: italic;
 			&:hover {
-				font-weight: bold;
+        font-weight: bold;
+        font-variant:small-caps;
 			}
 		}
 	}		
@@ -238,13 +234,15 @@ html {
 
 /*Media*/
 
-@media  (max-width: 601px) {
+@media  (max-width: 600px) {
 	.grid {
 		grid-template-columns: 1fr;
   }
-  .navigation__switcher{
+}
+@media  (min-width: 600px) {
+  .navigation__switcher {
 		display: none;
-	}
+  }
 }
 
 @media (max-width: 640px) {
@@ -268,6 +266,9 @@ html {
     &__item {
       margin: 5px;
       padding-top: 3vw;
+      &--menu {
+        display: none;
+      }
     }
     &__switcher {
       align-content: center;
@@ -278,9 +279,6 @@ html {
       font-size: 30px;
       margin: 1vw 0 5vw 5vw ;
       position: absolute; 
-    }
-    &__item--menu {
-      display: none;
     }
   }
 }
