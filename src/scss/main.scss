@@ -34,7 +34,6 @@ html {
 }
 
 .header {
-
   &__title { /* h1, website title BEM*/
     color: rgb(255, 255, 255);
     padding-top: 50px; 
@@ -50,7 +49,7 @@ html {
 .WTFlogo {
   border-radius: 25px;
 }
-.site-header { /* main menu BEM */
+.site-header { /* main menu */
 	background-color: rgba(100, 100, 100, 0.555);
 	border-radius: 25px;
 	box-sizing: content-box;
@@ -60,38 +59,38 @@ html {
 	z-index: 10;
 }
 
-.navigation{
-  &__list {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-  }
-  &_item {
-    display: block;
-    margin: 0 5px;
-  }
-    &:hover {
-      /*background: purple;*/
-      border-radius: 45px;
-      font-weight: bold;
-      padding: 5px;
+.navigation {
+	&__list {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		padding: 0;
+	}
+	&_item {
+		display: block;
+		margin: 0 5px;
+		&:hover {
+			/*background: purple;*/
+			border-radius: 45px;
+			font-weight: bold;
+			padding: 5px;
     }
-  &__link {
-    color: white;
-    font-style: italic;
-    &:hover {
-      color: whitesmoke;
+	}
+	&__link {
+		color: white;
+		font-style: italic;
+		&:hover {
+			color: whitesmoke;
     }
-    &--blog {
-      color: white;
-      font-style: italic;
-    }
-      &:hover {
-        font-weight: bold;
-      }
-  }   
+		&--blog {
+			color: white;
+			font-style: italic;
+			&:hover {
+				font-weight: bold;
+			}
+		}
+	}		
 }
 
 .main { 
@@ -146,7 +145,6 @@ html {
     margin: 2vw 15vw;
   }
   &__section {
-
   }
   &__section:not(.blog__section--special) {
     background-color: rgba(100, 100, 100, 0.555);
@@ -191,14 +189,14 @@ html {
   &__caption {
     border: 1px solid white;
   }
-  &_head {
+  &__head {
   }
   &__tr {
   }
   &__th {
     border: 1px solid white;
   }
-  &_body {
+  &__body {
   }
   &__td {
     border: 1px solid white;
@@ -286,4 +284,3 @@ html {
     }
   }
 }
-
