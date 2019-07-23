@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lobster&display=swap&subset=latin-ext');
 
 
 html {
@@ -17,7 +18,8 @@ html {
 	background-color: rgb(255, 255, 255);
 	background-image: linear-gradient(55deg, #839393 17%, #3325e5 100%);
 	background-color: #839393;
-	background-size: cover;
+  background-size: cover;
+  font-family: 'Lato';
 	margin: 32px auto;
 	max-width: 700px;
 	min-height: 100vh;
@@ -28,6 +30,7 @@ html {
 .header {
   &__title { /* h1, website title BEM*/
     color: rgb(255, 255, 255);
+    font-family: 'Lobster';
     padding-top: 50px; 
     &--red {
     color: darkred;
@@ -44,7 +47,8 @@ html {
 .site-header { /* main menu */
 	background-color: rgba(100, 100, 100, 0.555);
 	border-radius: 25px;
-	box-sizing: content-box;
+  box-sizing: content-box;
+  font-family: 'Lobster';
 	position: fixed;
 	top: 0;
 	width: 700px;
@@ -61,22 +65,30 @@ html {
 	}
 	&__item {
 		display: block;
-		margin: 0 5px;
+    margin: 0 5px;
+    padding: 5px;
 		&:hover {
-      font-variant:small-caps;
 			font-weight: bold;
-			padding: 5px;
     }
     &--menu {
-      font-style: none;
+      color: black;
       font-variant:none;
+      font-family: 'Lobster';
+      font-size: 28px;
+      &:hover {
+        font-variant:none;
+      }
     }
 	}
 	&__link {
-		color: white;
-		font-style: italic;
+    color: white;
+    font-family: 'Lato';
+    font-style: bold italic;
 		&:hover {
-			color: whitesmoke;
+      color: purple;
+      font-family: 'Lobster';
+      font-size: 145%;
+      font-style: bold;
     }
 		&--blog {
 			color: white;
@@ -91,7 +103,7 @@ html {
 
 .main { 
 	background-color: rgba(255, 255, 255, 0.4);
-	border-radius: 25px;
+  border-radius: 25px;
   padding: 2vw;
   &__section {
 
@@ -112,54 +124,63 @@ html {
 }
 
 .section__header { /* h2 text element BEM*/
-	color: purple;
-	font-size: 22px;
-	margin-bottom: 0;
+  border-bottom: 5px dotted white;
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 25px;
+  color: black;
+  font-size: 28px;
+  font-family: 'Lobster';
+	margin-bottom: 2vw;
 	text-decoration: underline;
 }
 
 
 .blog {
   &__navigation--header {
-    color: white;
+    color: black;
+    font-family: 'Lobster';
   }
   &__navigation--box{
-    background-color: rgba(100, 100, 100, 0.555);
+    background-color: rgba(100, 100, 100, 0.4);
     border: 2px solid white;
     border-radius: 25px;
     box-sizing: border-box;
     font-weight: bold;
     height: 100px;
-    margin: auto;
+    margin: 2vw auto; 
     width: 350px;
   }
   &__header {
+    background-color: rgba(100, 100, 100, 0.4);
     border-bottom: 5px dotted white;
+    border-radius: 25px;
     box-sizing: border-box;
-    color: #1460AA;
-    font-size: 32px;
-    margin: 2vw 15vw;
+    color: black;
+    font-family: 'Lobster';
+    text-decoration: underline;
+    font-size: 28px;
   }
   &__section {
   }
   &__section:not(.blog__section--special) {
-    background-color: rgba(100, 100, 100, 0.555);
+    background-color: rgba(100, 100, 100, 0.4);
     border-radius: 25px;
     padding: 1vw;
   }
 }
 
 .post__title {
-	color: black;
+  color: purple;
+  font-family: 'Lobster';
 	font-size: 18px;
   font-style: italic;
-  &__title::before {
+  &::before {
     color: red;
     content: "</>";
     display: inline-block;
     margin-right: 5px;
   }
-  &__title::after {
+  &::after {
     content: "";
     border-radius: 50%; 
     display: inline-block;

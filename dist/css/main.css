@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Lobster&display=swap&subset=latin-ext");
 html {
   line-height: 1.15;
   /* 1 */
@@ -324,6 +325,7 @@ html {
   background-image: linear-gradient(55deg, #839393 17%, #3325e5 100%);
   background-color: #839393;
   background-size: cover;
+  font-family: 'Lato';
   margin: 32px auto;
   max-width: 700px;
   min-height: 100vh;
@@ -333,6 +335,7 @@ html {
 .header__title {
   /* h1, website title BEM*/
   color: white;
+  font-family: 'Lobster';
   padding-top: 50px; }
   .header__title--red {
     color: darkred; }
@@ -346,6 +349,7 @@ html {
   border-radius: 25px;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  font-family: 'Lobster';
   position: fixed;
   top: 0;
   width: 700px;
@@ -366,20 +370,27 @@ html {
 
 .navigation__item {
   display: block;
-  margin: 0 5px; }
+  margin: 0 5px;
+  padding: 5px; }
   .navigation__item:hover {
-    font-variant: small-caps;
-    font-weight: bold;
-    padding: 5px; }
+    font-weight: bold; }
   .navigation__item--menu {
-    font-style: none;
-    font-variant: none; }
+    color: black;
+    font-variant: none;
+    font-family: 'Lobster';
+    font-size: 28px; }
+    .navigation__item--menu:hover {
+      font-variant: none; }
 
 .navigation__link {
   color: white;
-  font-style: italic; }
+  font-family: 'Lato';
+  font-style: bold italic; }
   .navigation__link:hover {
-    color: whitesmoke; }
+    color: purple;
+    font-family: 'Lobster';
+    font-size: 145%;
+    font-style: bold; }
   .navigation__link--blog {
     color: white;
     font-style: italic; }
@@ -403,48 +414,57 @@ html {
 
 .section__header {
   /* h2 text element BEM*/
-  color: purple;
-  font-size: 22px;
-  margin-bottom: 0;
+  border-bottom: 5px dotted white;
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 25px;
+  color: black;
+  font-size: 28px;
+  font-family: 'Lobster';
+  margin-bottom: 2vw;
   text-decoration: underline; }
 
 .blog__navigation--header {
-  color: white; }
+  color: black;
+  font-family: 'Lobster'; }
 
 .blog__navigation--box {
-  background-color: rgba(100, 100, 100, 0.555);
+  background-color: rgba(100, 100, 100, 0.4);
   border: 2px solid white;
   border-radius: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-weight: bold;
   height: 100px;
-  margin: auto;
+  margin: 2vw auto;
   width: 350px; }
 
 .blog__header {
+  background-color: rgba(100, 100, 100, 0.4);
   border-bottom: 5px dotted white;
+  border-radius: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #1460AA;
-  font-size: 32px;
-  margin: 2vw 15vw; }
+  color: black;
+  font-family: 'Lobster';
+  text-decoration: underline;
+  font-size: 28px; }
 
 .blog__section:not(.blog__section--special) {
-  background-color: rgba(100, 100, 100, 0.555);
+  background-color: rgba(100, 100, 100, 0.4);
   border-radius: 25px;
   padding: 1vw; }
 
 .post__title {
-  color: black;
+  color: purple;
+  font-family: 'Lobster';
   font-size: 18px;
   font-style: italic; }
-  .post__title__title::before {
+  .post__title::before {
     color: red;
     content: "</>";
     display: inline-block;
     margin-right: 5px; }
-  .post__title__title::after {
+  .post__title::after {
     content: "";
     border-radius: 50%;
     display: inline-block;
